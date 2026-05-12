@@ -1,3 +1,4 @@
+import type * as React from 'react'
 import { useEffect, useRef, useState } from 'react'
 import { motion, useScroll, useTransform, type MotionValue } from 'motion/react'
 import { cn } from '@/utils/cn'
@@ -20,11 +21,11 @@ interface CardProps {
   readonly className?: string
 }
 
-export const ContainerScroll = ({
+export const ContainerScroll: React.FC<ContainerScrollProps> = ({
   titleComponent,
   children,
   className,
-}: ContainerScrollProps) => {
+}) => {
   const containerRef = useRef<HTMLDivElement | null>(null)
   const [isMobile, setIsMobile] = useState(false)
   const { scrollYProgress } = useScroll({
@@ -67,7 +68,7 @@ export const ContainerScroll = ({
   )
 }
 
-const Header = ({ translate, titleComponent }: HeaderProps) => {
+const Header: React.FC<HeaderProps> = ({ translate, titleComponent }) => {
   return (
     <motion.div
       style={{ translateY: translate }}
@@ -78,7 +79,7 @@ const Header = ({ translate, titleComponent }: HeaderProps) => {
   )
 }
 
-const Card = ({ rotate, scale, children, className }: CardProps) => {
+const Card: React.FC<CardProps> = ({ rotate, scale, children, className }) => {
   return (
     <motion.div
       style={{

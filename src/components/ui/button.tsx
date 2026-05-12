@@ -9,11 +9,11 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          'border-[var(--primary)] bg-[var(--primary)] px-6 py-3 text-[var(--primary-foreground)] shadow-[0_0_0_1px_rgba(232,255,71,0.18),0_12px_30px_rgba(232,255,71,0.22)] hover:brightness-[1.03]',
+          'border-(--primary) bg-(--primary) px-6 py-3 text-(--primary-foreground) shadow-[0_0_0_1px_rgba(232,255,71,0.18),0_12px_30px_rgba(232,255,71,0.22)] hover:brightness-[1.03]',
         secondary:
-          'border-[var(--border-strong)] bg-white/6 px-6 py-3 text-[var(--foreground)] hover:border-[var(--primary)] hover:text-[var(--foreground)]',
+          'border-(--border-strong) bg-white/6 px-6 py-3 text-(--foreground) hover:border-(--primary) hover:text-(--foreground)',
         ghost:
-          'border-transparent bg-transparent px-3 py-2 text-[var(--foreground)] hover:text-[var(--primary)]',
+          'border-transparent bg-transparent px-3 py-2 text-(--foreground) hover:text-(--primary)',
       },
       size: {
         default: 'min-h-12',
