@@ -11,10 +11,10 @@ export const FooterBrand = ({
 }: FooterBrandProps) => {
   return (
     <div className="space-y-5">
-      <p className="display-heading text-3xl text-[var(--foreground)]">
+      <p className="display-heading text-3xl text-(--foreground)">
         {brandLabel}
       </p>
-      <p className="max-w-md text-sm leading-7 text-[var(--muted)]">
+      <p className="max-w-md text-sm leading-7 text-(--muted)">
         {description}
       </p>
     </div>

@@ -1,7 +1,6 @@
 import type * as React from 'react'
 import { motion } from 'motion/react'
 import { useState } from 'react'
-import type { FormEvent } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { interactiveButtonMotion } from '@/lib/animations'
@@ -18,7 +17,7 @@ export const CTASectionForm: React.FC<CTASectionFormProps> = ({ content }) => {
   const [submitted, setSubmitted] = useState(false)
   const [showError, setShowError] = useState(false)
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     if (!isValidEmail(email)) {
@@ -34,7 +33,7 @@ export const CTASectionForm: React.FC<CTASectionFormProps> = ({ content }) => {
 
   return (
     <form aria-label={content.formLabel} className="mt-10 space-y-4 lg:mt-0" onSubmit={handleSubmit}>
-      <label className="text-sm font-medium text-[var(--foreground)]" htmlFor="cta-email">
+      <label className="text-sm font-medium text-(--foreground)" htmlFor="cta-email">
         {content.inputLabel}
       </label>
       <Input
@@ -50,7 +49,7 @@ export const CTASectionForm: React.FC<CTASectionFormProps> = ({ content }) => {
         id="cta-feedback"
         className={cn(
           'min-h-6 text-sm',
-          showError ? 'text-[#ff7676]' : 'text-[var(--primary)]',
+          showError ? 'text-[#ff7676]' : 'text-(--primary)',
         )}
       >
         {showError ? content.validationMessage : submitted ? content.successMessage : ''}

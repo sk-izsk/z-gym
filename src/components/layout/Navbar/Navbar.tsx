@@ -22,7 +22,7 @@ export const Navbar: React.FC<NavbarProps> = ({ siteContent }) => {
       variants={navbarVariants}
     >
       <div className="section-frame">
-        <div className="panel-surface flex items-center justify-between rounded-full border border-[var(--border)] px-4 py-3 sm:px-6">
+        <div className="panel-surface flex items-center justify-between rounded-full border border-(--border) px-4 py-3 sm:px-6">
           <DesktopNav siteContent={siteContent} />
 
           <MobileNav siteContent={siteContent} />

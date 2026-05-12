@@ -14,7 +14,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ id, content }) => {
   return (
     <section id={id} className="noise-mask relative overflow-hidden pb-16 pt-32 sm:pt-36">
       <div className="section-frame">
-        <div className="panel-surface relative overflow-hidden rounded-[2.5rem] border border-[var(--border)] px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
+        <div className="panel-surface relative overflow-hidden rounded-[2.5rem] border border-(--border) px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
           <div
             className="absolute inset-0"
             style={{

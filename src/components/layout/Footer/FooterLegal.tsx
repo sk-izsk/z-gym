@@ -6,7 +6,7 @@ interface FooterLegalProps {
 
 export const FooterLegal: React.FC<FooterLegalProps> = ({ legal }) => {
   return (
-    <p className="mt-6 text-xs uppercase tracking-[0.2em] text-[var(--muted)]">
+    <p className="mt-6 text-xs uppercase tracking-[0.2em] text-(--muted)">
       {legal}
     </p>
   )

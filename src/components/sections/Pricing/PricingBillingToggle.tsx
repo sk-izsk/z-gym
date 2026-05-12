@@ -22,7 +22,7 @@ export const PricingBillingToggle = ({
 }: PricingBillingToggleProps) => {
   return (
     <div className="surface-card inline-flex flex-wrap items-center gap-3 rounded-full border px-4 py-3 sm:flex-nowrap sm:px-5">
-      <span className={cn('text-sm font-semibold', billingCycle === 'monthly' ? 'text-[var(--foreground)]' : 'text-[var(--muted)]')}>
+      <span className={cn('text-sm font-semibold', billingCycle === 'monthly' ? 'text-(--foreground)' : 'text-(--muted)')}>
         {monthlyLabel}
       </span>
       <Switch
@@ -35,10 +35,10 @@ export const PricingBillingToggle = ({
           })
         }}
       />
-      <span className={cn('text-sm font-semibold', billingCycle === 'yearly' ? 'text-[var(--foreground)]' : 'text-[var(--muted)]')}>
+      <span className={cn('text-sm font-semibold', billingCycle === 'yearly' ? 'text-(--foreground)' : 'text-(--muted)')}>
         {yearlyLabel}
       </span>
-      <span className="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--accent-ink)]">
+      <span className="rounded-full bg-(--accent-soft) px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-(--accent-ink)">
         {yearlyBadge}
       </span>
     </div>

@@ -19,14 +19,14 @@ export const CardTitle = ({
   className,
   ...props
 }: ComponentPropsWithoutRef<'h3'>) => {
-  return <h3 className={cn('display-heading text-2xl text-[var(--foreground)]', className)} {...props} />
+  return <h3 className={cn('display-heading text-2xl text-(--foreground)', className)} {...props} />
 }
 
 export const CardDescription = ({
   className,
   ...props
 }: ComponentPropsWithoutRef<'p'>) => {
-  return <p className={cn('text-sm leading-6 text-[var(--muted)]', className)} {...props} />
+  return <p className={cn('text-sm leading-6 text-(--muted)', className)} {...props} />
 }
 
 export const CardContent = ({

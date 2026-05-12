@@ -12,13 +12,13 @@ export const TrainerImage: React.FC<TrainerImageProps> = ({ trainer }) => {
 
   if (hasImageError) {
     return (
-      <div className="flex h-full w-full flex-col items-center justify-center gap-4 bg-[radial-gradient(circle_at_top,rgba(232,255,71,0.18),transparent_26%),linear-gradient(180deg,var(--surface-card-strong)_0%,var(--surface-card)_100%)] text-[var(--foreground)]">
-        <div className="flex h-20 w-20 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface-card-strong)]">
-          <UserRound className="h-10 w-10 text-[var(--accent-ink)]" aria-hidden="true" />
+      <div className="flex h-full w-full flex-col items-center justify-center gap-4 bg-[radial-gradient(circle_at_top,rgba(232,255,71,0.18),transparent_26%),linear-gradient(180deg,var(--surface-card-strong)_0%,var(--surface-card)_100%)] text-(--foreground)">
+        <div className="flex h-20 w-20 items-center justify-center rounded-full border border-(--border) bg-(--surface-card-strong)">
+          <UserRound className="h-10 w-10 text-(--accent-ink)" aria-hidden="true" />
         </div>
         <div className="text-center">
           <p className="display-heading text-3xl">{trainer.name}</p>
-          <p className="mt-2 text-sm uppercase tracking-[0.24em] text-[var(--accent-ink)]">{trainer.specialty}</p>
+          <p className="mt-2 text-sm uppercase tracking-[0.24em] text-(--accent-ink)">{trainer.specialty}</p>
         </div>
       </div>
     )

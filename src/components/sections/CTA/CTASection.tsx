@@ -36,7 +36,7 @@ export const CTASection: React.FC<CTASectionProps> = ({ id, content }) => {
         }}
       />
       <div className="section-frame relative">
-        <div className="surface-overlay rounded-[2.4rem] border border-[var(--border)] p-6 backdrop-blur-md sm:p-8 lg:grid lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-10">
+        <div className="surface-overlay rounded-[2.4rem] border border-(--border) p-6 backdrop-blur-md sm:p-8 lg:grid lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-10">
           <CTASectionContent content={content} />
           <CTASectionForm content={content} />
         </div>

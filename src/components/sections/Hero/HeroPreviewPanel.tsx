@@ -53,7 +53,7 @@ export const HeroPreviewPanel: React.FC<HeroPreviewPanelProps> = ({ content }) =
           <p className="text-sm font-medium uppercase tracking-[0.2em]" style={{ color: 'var(--hero-muted)' }}>
             Weekly split
           </p>
-          <div className="inline-flex items-center gap-2 rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--accent-ink)]">
+          <div className="inline-flex items-center gap-2 rounded-full bg-(--accent-soft) px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-(--accent-ink)">
             <span>Live</span>
           </div>
         </div>
@@ -72,7 +72,7 @@ export const HeroPreviewPanel: React.FC<HeroPreviewPanelProps> = ({ content }) =
                 <p className="display-heading max-w-[10rem] text-2xl" style={{ color: 'var(--hero-foreground)' }}>
                   {card}
                 </p>
-                <ArrowUpRight className="h-5 w-5 text-[var(--accent-ink)]" aria-hidden="true" />
+                <ArrowUpRight className="h-5 w-5 text-(--accent-ink)" aria-hidden="true" />
               </div>
             </div>
           ))}

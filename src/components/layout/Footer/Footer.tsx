@@ -14,7 +14,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ content }) => {
   return (
-    <motion.footer {...revealInViewMotion} className="border-t border-[var(--border)] pb-10 pt-16">
+    <motion.footer {...revealInViewMotion} className="border-t border-(--border) pb-10 pt-16">
       <div className="section-frame">
         <motion.div
           {...staggerInViewMotion}

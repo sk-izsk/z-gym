@@ -21,23 +21,23 @@ export const TestimonialControls = ({
       <motion.div {...interactiveButtonMotion}>
         <Button
           aria-label={previousLabel}
-          className="text-[var(--foreground)]"
+          className="text-(--foreground)"
           size="icon"
           variant="secondary"
           onClick={onPrevious}
         >
-          <ChevronLeft className="h-5 w-5 text-[var(--foreground)]" aria-hidden="true" />
+          <ChevronLeft className="h-5 w-5 text-(--foreground)" aria-hidden="true" />
         </Button>
       </motion.div>
       <motion.div {...interactiveButtonMotion}>
         <Button
           aria-label={nextLabel}
-          className="text-[var(--foreground)]"
+          className="text-(--foreground)"
           size="icon"
           variant="secondary"
           onClick={onNext}
         >
-          <ChevronRight className="h-5 w-5 text-[var(--foreground)]" aria-hidden="true" />
+          <ChevronRight className="h-5 w-5 text-(--foreground)" aria-hidden="true" />
         </Button>
       </motion.div>
     </div>

@@ -17,12 +17,12 @@ export const StatsBarItem: React.FC<StatsBarItemProps> = ({ stat, isActive }) =>
       variants={revealInViewMotion.variants}
       className="surface-card rounded-[1.75rem] border p-5"
     >
-      <p className="display-heading text-4xl text-[var(--foreground)] sm:text-5xl">
+      <p className="display-heading text-4xl text-(--foreground) sm:text-5xl">
         {stat.prefix ?? ''}
         {value.toLocaleString()}
         {stat.suffix ?? ''}
       </p>
-      <p className="mt-2 text-sm uppercase tracking-[0.2em] text-[var(--muted)]">{stat.label}</p>
+      <p className="mt-2 text-sm uppercase tracking-[0.2em] text-(--muted)">{stat.label}</p>
     </motion.div>
   )
 }

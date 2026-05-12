@@ -56,7 +56,7 @@ export const MobileNav: React.FC<Props> = ({ siteContent }) => {
             </Dialog.Overlay>
             <Dialog.Content asChild>
               <motion.div
-                className="fixed right-0 top-0 z-50 h-full w-full max-w-sm border-l border-[var(--border)] bg-[var(--background-elevated)] p-6 shadow-2xl"
+                className="fixed right-0 top-0 z-50 h-full w-full max-w-sm border-l border-(--border) bg-(--background-elevated) p-6 shadow-2xl"
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
@@ -64,10 +64,10 @@ export const MobileNav: React.FC<Props> = ({ siteContent }) => {
               >
                 <div className="flex items-start justify-between gap-6">
                   <div className="space-y-2">
-                    <Dialog.Title className="display-heading text-3xl text-[var(--foreground)]">
+                    <Dialog.Title className="display-heading text-3xl text-(--foreground)">
                       {mobileMenuTitle}
                     </Dialog.Title>
-                    <Dialog.Description className="text-sm leading-6 text-[var(--muted)]">
+                    <Dialog.Description className="text-sm leading-6 text-(--muted)">
                       {mobileMenuDescription}
                     </Dialog.Description>
                   </div>
@@ -94,9 +94,9 @@ export const MobileNav: React.FC<Props> = ({ siteContent }) => {
                       <li key={item.href}>
                         <a
                           className={cn(
-                            'focus-ring flex items-center justify-between rounded-[1.5rem] border border-[var(--border)] px-4 py-4 text-lg font-medium text-[var(--foreground)]',
+                            'focus-ring flex items-center justify-between rounded-[1.5rem] border border-(--border) px-4 py-4 text-lg font-medium text-(--foreground)',
                             index === navigation.length - 1 &&
-                              'border-[var(--primary)] text-[var(--primary)]',
+                              'border-(--primary) text-(--primary)',
                           )}
                           href={item.href}
                           aria-label={item.ariaLabel}

@@ -17,7 +17,7 @@ export const DesktopNav: React.FC<Props> = ({ siteContent }) => {
   return (
     <>
       <a
-        className="focus-ring display-heading text-xl tracking-[0.24em] text-[var(--foreground)]"
+        className="focus-ring display-heading text-xl tracking-[0.24em] text-(--foreground)"
         href="#hero"
         aria-label={brandName}
       >
@@ -27,7 +27,7 @@ export const DesktopNav: React.FC<Props> = ({ siteContent }) => {
         {navigation.map((item) => (
           <a
             key={item.href}
-            className="focus-ring text-sm font-medium text-[var(--muted)] transition-colors hover:text-[var(--foreground)]"
+            className="focus-ring text-sm font-medium text-(--muted) transition-colors hover:text-(--foreground)"
             href={item.href}
             aria-label={item.ariaLabel}
           >
@@ -45,18 +45,18 @@ export const DesktopNav: React.FC<Props> = ({ siteContent }) => {
           title={theme === 'dark' ? lightThemeLabel : darkThemeLabel}
         >
           {theme === 'dark' ? (
-            <SunMedium className="h-4 w-4 text-[var(--foreground)]" aria-hidden="true" />
+            <SunMedium className="h-4 w-4 text-(--foreground)" aria-hidden="true" />
           ) : (
-            <Moon className="h-4 w-4 text-[var(--primary-foreground)]" aria-hidden="true" />
+            <Moon className="h-4 w-4 text-(--primary-foreground)" aria-hidden="true" />
           )}
         </Button>
         <motion.div {...interactiveButtonMotion}>
           <Button asChild variant="primary">
             <a href="#join" aria-label={navigation[navigation.length - 1]?.ariaLabel}>
-              <span className="text-[var(--primary-foreground)]">
+              <span className="text-(--primary-foreground)">
                 {navigation[navigation.length - 1]?.label}
               </span>
-              <MoveRight className="h-4 w-4 text-[var(--primary-foreground)]" aria-hidden="true" />
+              <MoveRight className="h-4 w-4 text-(--primary-foreground)" aria-hidden="true" />
             </a>
           </Button>
         </motion.div>

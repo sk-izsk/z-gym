@@ -18,12 +18,12 @@ export const TestimonialSlide: React.FC<TestimonialSlideProps> = ({ activeItem }
         initial="hidden"
         variants={carouselVariants}
       >
-        <blockquote className="display-heading max-w-4xl text-3xl leading-tight text-[var(--foreground)] sm:text-4xl lg:text-5xl">
+        <blockquote className="display-heading max-w-4xl text-3xl leading-tight text-(--foreground) sm:text-4xl lg:text-5xl">
           “{activeItem.quote}”
         </blockquote>
         <figcaption className="mt-10 space-y-1">
-          <p className="text-lg font-semibold text-[var(--foreground)]">{activeItem.name}</p>
-          <p className="text-sm uppercase tracking-[0.18em] text-[var(--accent-ink)]">{activeItem.role}</p>
+          <p className="text-lg font-semibold text-(--foreground)">{activeItem.name}</p>
+          <p className="text-sm uppercase tracking-[0.18em] text-(--accent-ink)">{activeItem.role}</p>
         </figcaption>
       </motion.figure>
     </AnimatePresence>

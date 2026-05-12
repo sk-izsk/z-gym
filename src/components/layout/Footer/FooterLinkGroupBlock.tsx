@@ -14,14 +14,14 @@ export const FooterLinkGroupBlock = ({
       variants={revealInViewMotion.variants}
       className="space-y-4"
     >
-      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--accent-ink)]">
+      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-(--accent-ink)">
         {group.title}
       </p>
       <ul className="space-y-3">
         {group.links.map((link) => (
           <li key={link.label}>
             <a
-              className="focus-ring text-sm text-[var(--muted)] transition-colors hover:text-[var(--foreground)]"
+              className="focus-ring text-sm text-(--muted) transition-colors hover:text-(--foreground)"
               href={link.href}
               aria-label={link.ariaLabel}
             >

@@ -19,7 +19,7 @@ export const FooterSocialLinks = ({
           <motion.a
             key={social.label}
             {...interactiveButtonMotion}
-            className="focus-ring inline-flex h-12 w-12 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface-card-strong)] text-[var(--foreground)]"
+            className="focus-ring inline-flex h-12 w-12 items-center justify-center rounded-full border border-(--border) bg-(--surface-card-strong) text-(--foreground)"
             href={social.href}
             aria-label={social.ariaLabel}
             rel="noreferrer"

@@ -1,5 +1,5 @@
+import type * as React from 'react'
 import { motion } from 'motion/react'
-import type { FormEvent } from 'react'
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -26,7 +26,7 @@ export const FooterNewsletterForm = ({
   const [submitted, setSubmitted] = useState(false)
   const [showError, setShowError] = useState(false)
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     if (!isValidEmail(email)) {
@@ -64,7 +64,7 @@ export const FooterNewsletterForm = ({
           id="footer-feedback"
           className={cn(
             'min-h-6 text-sm',
-            showError ? 'text-[#ff7676]' : 'text-[var(--accent-ink)]',
+            showError ? 'text-[#ff7676]' : 'text-(--accent-ink)',
           )}
         >
           {showError

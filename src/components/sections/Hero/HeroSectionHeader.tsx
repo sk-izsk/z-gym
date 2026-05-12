@@ -43,8 +43,8 @@ export const HeroSectionHeader: React.FC<HeroSectionHeaderProps> = ({ content })
         <motion.div {...interactiveButtonMotion}>
           <Button asChild>
             <a href={content.primaryAction.href} aria-label={content.primaryAction.ariaLabel}>
-              <span className="text-[var(--primary-foreground)]">{content.primaryAction.label}</span>
-              <MoveRight className="h-4 w-4 text-[var(--primary-foreground)]" aria-hidden="true" />
+              <span className="text-(--primary-foreground)">{content.primaryAction.label}</span>
+              <MoveRight className="h-4 w-4 text-(--primary-foreground)" aria-hidden="true" />
             </a>
           </Button>
         </motion.div>
