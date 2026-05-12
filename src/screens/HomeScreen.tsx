@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react'
+import type * as React from 'react'
 import { Footer } from '@/components/layout/Footer/Footer'
 import { Navbar } from '@/components/layout/Navbar/Navbar'
 import { CTASection } from '@/components/sections/CTA/CTASection'
@@ -9,6 +9,7 @@ import { StatsBarSection } from '@/components/sections/StatsBar/StatsBarSection'
 import { TestimonialsSection } from '@/components/sections/Testimonials/TestimonialsSection'
 import { TrainersSection } from '@/components/sections/Trainers/TrainersSection'
 import { siteContent } from '@/constants/content'
+import { lazy, Suspense } from 'react'
 
 const sectionFallback = <div className="section-frame h-40" aria-hidden="true" />
 const footerFallback = <div className="section-frame h-24" aria-hidden="true" />
@@ -19,21 +20,10 @@ const LazyTestimonialsSection = lazy(async () => ({ default: TestimonialsSection
 const LazyCTASection = lazy(async () => ({ default: CTASection }))
 const LazyFooter = lazy(async () => ({ default: Footer }))
 
-const HomeScreen = () => {
+const HomeScreen: React.FC = () => {
   return (
     <div className="page-shell">
-      <Navbar
-        brandName={siteContent.brandName}
-        navAriaLabel={siteContent.navAriaLabel}
-        themeToggleLabel={siteContent.themeToggleLabel}
-        darkThemeLabel={siteContent.darkThemeLabel}
-        lightThemeLabel={siteContent.lightThemeLabel}
-        navigation={siteContent.navigation}
-        mobileMenuButtonLabel={siteContent.mobileMenuButtonLabel}
-        mobileMenuTitle={siteContent.mobileMenuTitle}
-        mobileMenuDescription={siteContent.mobileMenuDescription}
-        closeMenuLabel={siteContent.closeMenuLabel}
-      />
+      <Navbar siteContent={siteContent} />
 
       <main>
         <HeroSection id="hero" content={siteContent.hero} />

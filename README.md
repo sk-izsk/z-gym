@@ -4,6 +4,8 @@ Production-style single-page gym and fitness web application built with React, T
 
 This project is structured as a maintainable frontend system rather than a one-off landing page. The code is organized around typed content models, isolated UI primitives, reusable hooks, and section-level composition so the app can grow without collapsing into tightly coupled JSX.
 
+Live URL: https://zed-gym.netlify.app/
+
 ## Overview
 
 Z Gym is a responsive SPA with:
